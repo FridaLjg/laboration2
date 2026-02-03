@@ -5,3 +5,4 @@ Syftet med denna laboration är att träna på att använda FetchAPI-ansrop med 
 Av Frida Ljungberg, 2026.
 
 ### Länk till webbplats
+https://laboration2dt211g.netlify.app/
