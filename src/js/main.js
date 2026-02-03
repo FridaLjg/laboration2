@@ -3,10 +3,6 @@ let allData = [];
 
 document.addEventListener("DOMContentLoaded", async () => {
     loadData();
-
-    //Händelselyssnare för sortering
-    document.querySelector("#sort-by-code").addEventListener
-
 });
 
 async function loadData() {
@@ -29,7 +25,7 @@ async function loadData() {
 
 function displayData(data) {
     const dataListEl = document.querySelector("#course-table");
-    //Radera
+    //Radera listan
     dataListEl.innerHTML = ""
 
     //Loopa genom och skriv ut
@@ -43,5 +39,23 @@ function displayData(data) {
         `;
     });
 }
+
+window.onload = () => {
+    //Händelselyssnare
+    document.querySelector("#search").addEventListener("input", filterData);
+}
+
+//Funktion för att söka
+function filterData() {
+    let searchPhrase = document.querySelector("#search").value.toLowerCase();
+
+    if (searchPhrase === "") {
+        displayData(allData);
+    } else {
+        let filteredData = allData.filter((data) => data.code.substring(0, searchPhrase.length).toLowerCase() === searchPhrase || data.coursename.substring(0, searchPhrase.length).toLowerCase() === searchPhrase);
+        displayData(filteredData);
+    }
+}
+
 
 
