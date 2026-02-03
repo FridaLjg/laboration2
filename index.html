@@ -1,31 +1,49 @@
 <!doctype html>
 <html lang="sv">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Laboration 2</title>
-    <link rel="stylesheet" href="src/css/styles.css">
-  </head>
-  <body>
-    <div class="container">
 
-      <!--Header-->
-      <header>
-        <h1>Laboration 2 - DT211G</h1>
-      </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laboration 2</title>
+  <link rel="stylesheet" href="src/css/styles.css">
+</head>
 
-      <!--Main-->
-      <main>
+<body>
+  <div class="container">
 
-      </main>
+    <!--Header-->
+    <header>
+      <h1>Laboration 2 - DT211G</h1>
+    </header>
 
-      <!--Footer-->
-      <footer>
-        <p>Av: Frida Ljungberg, 2026.</p>
-      </footer>
+    <!--Main-->
+    <main>
+      <div class="content">
+        <h2>Webbutveckling - Ramschema</h2>
 
+        <!--Sökfält-->
+        <p>Sök:</p>
+        <input type="text" id="search" placeholder="Sök efter kurskod eller kursnamn">
 
-    </div>
-    <script type="module" src="/src/js/main.js"></script>
-  </body>
+        <!--Lista med kurskod, namn och progression-->
+        <div class="header-row">
+          <span id="sort-by-code" class="code">Kurskod</span>
+          <span id="sort-by-name" class="name">Kursnamn</span>
+          <span id="sort-by-progression" class="progression">Progression</span>
+        </div>
+
+        <div id="course-table"></div>
+
+      </div>
+    </main>
+
+    <!--Footer-->
+    <footer>
+      <p>Av: Frida Ljungberg, 2026.</p>
+    </footer>
+
+  </div>
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+
 </html>
